@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(135deg, rgb(161, 194, 234), rgb(135, 212, 188));
+}
+
+.card {
+  max-width: 670px;
+  background: linear-gradient(135deg, rgb(243, 195, 250), rgb(255, 230, 141));
+  border-radius: 20px;
+  padding: 40px 35px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 50px;
+  color: rgba(100, 50, 100, 0.726);
+  font-weight: 800;
+}
+
+.datetime {
+  padding: 10px;
+  color: rgb(129, 84, 0);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Create new task: Input and Button*/
+
+.write-task {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #e0e0e0;
+  border-radius: 50px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.write-task input {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+.write-task button {
+  width: 100px;
+  border: none;
+  background-color: orange;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+  height: 60px;
+  border-radius: 50px;
+  transition: width 0.3s ease;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.write-task button:hover {
+  background-color: rgb(214, 133, 68);
+  width: 110px;
+}
+
+.write-task button:active {
+  background-color: rgb(155, 97, 48);
+}
+
+/* Task List */
+
+#tasklist {
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
+}
+
+#tasklist li {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+/* Custom CheckBox */
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.checkbox-wrapper .round {
+  position: relative;
+}
+
+.checkbox-wrapper .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  display: block;
+}
+
+.checkbox-wrapper .round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 9px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checkbox-wrapper .round input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.checkbox-wrapper .round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.checkbox-wrapper .round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/* Task Text */
+
+.task-text {
+  margin-left: 10px;
+  padding-left: 5px;
+  flex: 1;
+}
+
+.task-text s {
+  color: gray;
+}
+
+/* Clear Task Button */
+
+.task-item button {
+  float: right;
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+  opacity: 0%;
+  color: rgb(141, 141, 141);
+  background: transparent;
+}
+
+.task-item:hover button {
+  color: rgb(141, 141, 141);
+  opacity: 40%;
+}
+
+.task-item button:hover {
+  color: rgb(150, 58, 58);
+  opacity: 100%;
+}
+
+// Animations
+
+@keyframes ClearTaskfadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.clear-task-fade-out {
+  animation: ClearTaskfadeOut 0.3s ease forwards;
+}
