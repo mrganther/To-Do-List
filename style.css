@@ -177,9 +177,9 @@ h2 {
   opacity: 100%;
 }
 
-// Animations
+/* Animations */
 
-@keyframes ClearTaskfadeOut {
+@keyframes clearTaskFadeOut {
   from {
     opacity: 1;
     transform: translateX(0);
@@ -191,5 +191,5 @@ h2 {
 }
 
 .clear-task-fade-out {
-  animation: ClearTaskfadeOut 0.3s ease forwards;
+  animation: clearTaskFadeOut 0.3s ease forwards;
 }
